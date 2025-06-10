@@ -1,0 +1,25 @@
+게임이 시작되고 나서 시간을 
+00:00:000 분:초:밀리초로 나타내는 
+로그를 update 에서 출력해줘.
+
+
+
+시간 문자열을 만드는 내용은 
+함수로 따로 분리해줘.
+
+
+싱글톤으로 만들어줘.
+
+
+오른쪽 화살표를 누르면 surfaceEffector2D.speed 를 10으로 하고 
+왼쪽 화살표를 누르면 surfaceEffector2D.speed 를 5으로 하는 코드를 작성해줘.
+
+
+스페이스 키를 누르면 점프하도록
+
+* Coin
+게임오브젝트에 있는 ParticleSystem 컴포넌트를 가져와서 
+Trigger에 들어오면 ParticleSystem을 Play해줘.
+
+게임오브젝트에 있는 AudioSource 컴포넌트를 가져와서 
+Trigger에 들어오면 AudioSource을 Play해줘.
