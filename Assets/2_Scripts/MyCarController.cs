@@ -28,7 +28,7 @@ public class MyCarController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            surfaceEffector2D.speed = 9f;
+            surfaceEffector2D.speed = 10f;
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
