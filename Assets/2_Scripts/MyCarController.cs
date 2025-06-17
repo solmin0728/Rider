@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MyCarController : MonoBehaviour
 {
@@ -8,13 +9,16 @@ public class MyCarController : MonoBehaviour
     private bool onGround = false;
 
     public float jumpForce = 7f;
+    public float defaultSpeed = 7f; // 기본 속도
+
+    private Coroutine boosterCoroutine;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.mass = 10f;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<SurfaceEffector2D>(out var effector))
@@ -32,6 +36,24 @@ public class MyCarController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("booster") && surfaceEffector2D != null)
+        {
+            if (boosterCoroutine != null)
+                StopCoroutine(boosterCoroutine);
+            boosterCoroutine = StartCoroutine(BoosterRoutine());
+        }
+    }
+
+    private IEnumerator BoosterRoutine()
+    {
+        float originalSpeed = surfaceEffector2D.speed;
+        surfaceEffector2D.speed = 20f;
+        yield return new WaitForSeconds(3f);
+        surfaceEffector2D.speed = originalSpeed;
+    }
+
     private float rotationInput;
 
     private void Update()
@@ -40,9 +62,14 @@ public class MyCarController : MonoBehaviour
 
         if (onGround)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            // 오른쪽 키를 누르면 15, 떼면 defaultSpeed로 복구
+            if (Input.GetKey(KeyCode.RightArrow))
             {
-                surfaceEffector2D.speed = 9f;
+                surfaceEffector2D.speed = 12f;
+            }
+            else
+            {
+                surfaceEffector2D.speed = defaultSpeed;
             }
             rotationInput = 0f; // 바닥에선 회전 입력 없음
         }
