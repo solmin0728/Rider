@@ -4,27 +4,36 @@ using System.Collections;
 public class MyCarController : MonoBehaviour
 {
     private SurfaceEffector2D surfaceEffector2D;
-    public float rotationSpeed = 300f; // 초당 회전 각도(도)
+    public float rotationSpeed = 300f;
     private Rigidbody2D rb;
-    private bool onGround = false;
 
     public float jumpForce = 7f;
-    public float defaultSpeed = 7f; // 기본 속도
+    public float defaultSpeed = 7f;
+    public float boostSpeed = 20f;
+    public float accelSpeed = 12f;
 
-    private Coroutine boosterCoroutine;
+    private bool onGround = false;
+    private float rotationInput;
+
+    // 파티클 시스템 참조
+    private ParticleSystem groundParticle;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.mass = 10f;
+        groundParticle = GetComponentInChildren<ParticleSystem>();
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<SurfaceEffector2D>(out var effector))
         {
             onGround = true;
             surfaceEffector2D = effector;
+            // 바닥에 닿으면 파티클 재생
+            if (groundParticle != null && !groundParticle.isPlaying)
+                groundParticle.Play();
         }
     }
 
@@ -33,54 +42,37 @@ public class MyCarController : MonoBehaviour
         if (collision.gameObject.TryGetComponent<SurfaceEffector2D>(out var effector))
         {
             onGround = false;
+            // 공중에 뜨면 파티클 정지
+            if (groundParticle != null && groundParticle.isPlaying)
+                groundParticle.Stop();
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("booster") && surfaceEffector2D != null)
-        {
-            if (boosterCoroutine != null)
-                StopCoroutine(boosterCoroutine);
-            boosterCoroutine = StartCoroutine(BoosterRoutine());
-        }
-    }
-
-    private IEnumerator BoosterRoutine()
-    {
-        float originalSpeed = surfaceEffector2D.speed;
-        surfaceEffector2D.speed = 20f;
-        yield return new WaitForSeconds(3f);
-        surfaceEffector2D.speed = originalSpeed;
-    }
-
-    private float rotationInput;
 
     private void Update()
     {
         if (surfaceEffector2D == null) return;
 
-        if (onGround)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            // 오른쪽 키를 누르면 15, 떼면 defaultSpeed로 복구
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                surfaceEffector2D.speed = 12f;
-            }
-            else
-            {
-                surfaceEffector2D.speed = defaultSpeed;
-            }
-            rotationInput = 0f; // 바닥에선 회전 입력 없음
+            surfaceEffector2D.speed = boostSpeed;
         }
+        else if (onGround && Input.GetKey(KeyCode.LeftArrow))
+        {
+            surfaceEffector2D.speed = 3f;
+        }
+        else if (onGround && Input.GetKey(KeyCode.RightArrow))
+        {
+            surfaceEffector2D.speed = accelSpeed;
+        }
+        else if (onGround)
+        {
+            surfaceEffector2D.speed = defaultSpeed;
+        }
+
+        if (!onGround && Input.GetKey(KeyCode.RightArrow))
+            rotationInput = 1f;
         else
-        {
-            // 공중에서만 회전 입력 저장 (오른쪽 키만)
-            if (Input.GetKey(KeyCode.RightArrow))
-                rotationInput = 1f;
-            else
-                rotationInput = 0f;
-        }
+            rotationInput = 0f;
 
         UIManager.Instance.UpdateSurfaceText($"Surface Speed : {surfaceEffector2D.speed:F1}");
 
@@ -101,7 +93,6 @@ public class MyCarController : MonoBehaviour
             }
             else
             {
-                // 공중에서 입력이 없으면 회전 멈춤
                 rb.angularVelocity = 0f;
             }
         }
@@ -110,9 +101,10 @@ public class MyCarController : MonoBehaviour
     private void Jump()
     {
         onGround = false;
-
         if (rb == null) return;
-
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        // 점프 시 파티클 정지
+        if (groundParticle != null && groundParticle.isPlaying)
+            groundParticle.Stop();
     }
 }
