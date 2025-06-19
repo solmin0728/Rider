@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Workspace08\\Rider\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|D:\\Workspace08\\Rider\\assets\\2_scripts\\mycarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|d:\\workspace08\\rider\\assets\\2_scripts\\mycarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|solutionrelative:assets\\2_scripts\\mycarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|d:\\workspace08\\rider\\assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|D:\\Workspace08\\Rider\\assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|solutionrelative:assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -58,8 +58,7 @@
               "RelativeToolTip": "Assets\\2_Scripts\\KillZone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T04:25:14.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T04:25:14.946Z"
             },
             {
               "$type": "Document",
@@ -93,7 +92,7 @@
               "RelativeDocumentMoniker": "Assets\\2_Scripts\\MyCarController.cs",
               "ToolTip": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\MyCarController.cs",
               "RelativeToolTip": "Assets\\2_Scripts\\MyCarController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAE4AAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAQwFIAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T01:39:19.021Z",
               "EditorCaption": ""
