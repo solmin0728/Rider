@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Workspace08\\Rider\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|D:\\Workspace08\\Rider\\assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|solutionrelative:assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|d:\\workspace08\\rider\\assets\\2_scripts\\mycarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|solutionrelative:assets\\2_scripts\\mycarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Workspace08\\Rider\\Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|D:\\Workspace08\\Rider\\assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|solutionrelative:assets\\2_scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D58C5E6C-4143-CD12-CE54-0952BD9F9316}|Assembly-CSharp.csproj|D:\\Workspace08\\Rider\\assets\\2_scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,52 +50,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "KillZone.cs",
               "DocumentMoniker": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\KillZone.cs",
               "RelativeDocumentMoniker": "Assets\\2_Scripts\\KillZone.cs",
               "ToolTip": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\KillZone.cs",
               "RelativeToolTip": "Assets\\2_Scripts\\KillZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T04:25:14.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VolumeEditor.cs",
               "DocumentMoniker": "D:\\Workspace08\\Rider\\Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs",
               "ToolTip": "D:\\Workspace08\\Rider\\Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.core@1c27dfa04d8a\\Editor\\Volume\\VolumeEditor.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAADwv1QAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAADwv1QAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T04:41:02.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\2_Scripts\\GameManager.cs",
               "ToolTip": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\2_Scripts\\GameManager.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T04:40:28.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MyCarController.cs",
               "DocumentMoniker": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\MyCarController.cs",
               "RelativeDocumentMoniker": "Assets\\2_Scripts\\MyCarController.cs",
               "ToolTip": "D:\\Workspace08\\Rider\\Assets\\2_Scripts\\MyCarController.cs",
               "RelativeToolTip": "Assets\\2_Scripts\\MyCarController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAwFIAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAUwFIAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T01:39:19.021Z",
               "EditorCaption": ""
